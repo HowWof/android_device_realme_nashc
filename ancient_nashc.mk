@@ -12,10 +12,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/realme/nashc/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AncientOS stuff.
+$(call inherit-product, vendor/ancient/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_nashc
+# AncientOS flags
+TARGET_FACE_UNLOCK_SUPPORTED =: true
+TARGET_BOOT_ANIMATION_RES := 1080
+ANCIENT_GAPPS=true
+
+PRODUCT_NAME := ancient_nashc
 PRODUCT_DEVICE := nashc
 PRODUCT_MANUFACTURER := Realme
 PRODUCT_BRAND := Realme
